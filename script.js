@@ -138,7 +138,7 @@ function showProductDetail(productId) {
                 <h2>${product.name}</h2>
                 <p>${product.description}</p>
                 <div style="display: flex; align-items: center; margin-bottom: 24px;">
-                    <span class="product-detail-price">$${product.price.toFixed(2)}</span>
+                    <span class="product-detail-price">\u00a3${product.price.toFixed(2)}</span>
                     <span class="product-category">${product.category}</span>
                 </div>
                 <div class="product-actions">
@@ -255,7 +255,7 @@ function renderCart() {
                         <img src="${product.image}" alt="${product.name}">
                         <div>
                             <h3>${product.name}</h3>
-                            <p>$${product.price.toFixed(2)}</p>
+                            <p>\u00a3${product.price.toFixed(2)}</p>
                         </div>
                     </div>
                     <div class="cart-item-actions">
@@ -264,7 +264,7 @@ function renderCart() {
                             <span>${cartItem.quantity}</span>
                             <button onclick="updateCartQuantity('${product.id}', ${cartItem.quantity + 1})">+</button>
                         </div>
-                        <span class="cart-item-total">$${itemTotal.toFixed(2)}</span>
+                        <span class="cart-item-total">\u00a3${itemTotal.toFixed(2)}</span>
                         <button class="remove-item-button" onclick="removeFromCart('${product.id}')">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -276,7 +276,7 @@ function renderCart() {
             }
         });
     }
-    cartTotalSpan.textContent = `$${total.toFixed(2)}`;
+    cartTotalSpan.textContent = `\u00a3${total.toFixed(2)}`;
 }
 
 /**
